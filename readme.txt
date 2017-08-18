@@ -1,7 +1,7 @@
 === BurstPay for WooCommerce ===
 Contributors: BurstPay
 Donate link: https://www.burstpay.net
-Tags: burstpay, burstcoin, payment gateway, payment module, woocommerce, btc, xbt
+Tags: burstpay, burstcoin, payment gateway, payment module, woocommerce
 Requires at least: 4.0
 Tested up to: 4.7.3
 Stable tag: trunk
@@ -25,9 +25,3 @@ BurstPay is a burstcoin payment processor, which allows businesses to receive pa
 6. Don't forget check "Enable Burstcoin payment via BurstPay" checkbox in WooCommerce-Burstpay Plugin settings
 
 [Plugin not working? Most common plugin issues] support[at]burstpay[dot]net
-
-== Screenshots ==
-
-1. WooCommerce-Burstpay Plugin Settings
-2. Payout options in Woocommerce Checkout page
-3. BurstPay Payment Page
