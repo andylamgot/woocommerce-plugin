@@ -141,7 +141,7 @@ function burstpay_init()
         $info=get_bloginfo('name', 'raw').' Order #'.$order->id;
         $custom=$order->id;
 
-         $bind=array("amount"=>$amount, "currency"=>$currency, "secret"=>$token, "address"=>$address, "notify_url"=>$notify, "return_url"=>$return, "custom"=>$custom, "info" => $info);
+         $bind=array("amount"=>$amount, "currency"=>$currency, "secret"=>$token, "address"=>$address, "notify_url"=>$notify, "return_url"=>$return, "custom"=>$custom, "info" => $info, "rfid"=>"woocommerce");
          $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,"https://burstpay.net/?api=1");
         curl_setopt($ch, CURLOPT_POST, 1);
