@@ -6,7 +6,6 @@ Plugin URI: https://www.burstpay.net
 Description: Accept Burstcoin via BurstPay in your WooCommerce store
 Version: 1.0.0
 Author: BurstPay
-Author URI: https://www.burstpay.net
 License: MIT License
 License URI: https://github.com/burstpay/woocommerce-plugin/blob/master/LICENSE
 Github Plugin URI: https://github.com/burstpay/woocommerce-plugin
@@ -142,16 +141,20 @@ function burstpay_init()
         $custom=$order->id;
 
          $bind=array("amount"=>$amount, "currency"=>$currency, "secret"=>$token, "address"=>$address, "notify_url"=>$notify, "return_url"=>$return, "custom"=>$custom, "info" => $info, "rfid"=>"woocommerce");
-         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL,"https://burstpay.net/?api=1");
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($bind));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $res = curl_exec ($ch);
-        $result=json_decode($res,true);
 
-        curl_close ($ch);
 
+      $args = array(
+          'body' => $bind,
+          'timeout' => '5',
+          'redirection' => '5',
+          'httpversion' => '1.0',
+          'blocking' => true,
+          'headers' => array(),
+          'cookies' => array()
+      );
+      
+      $response = wp_remote_post( 'https://burstpay.net/?api=1', $args );
+      $result=json_decode($response['body'],true);
 
       if ($result['status']==1) {
         return array(
