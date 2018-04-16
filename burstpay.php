@@ -98,7 +98,8 @@ function burstpay_init()
           'options' => array(
             'BURST' => __('Burstcoin (฿)', 'woocommerce'),
             'EUR' => __('Euros (€)', 'woocommerce'),
-            'USD' => __('US Dollars ($)', 'woocommerce')
+            'USD' => __('US Dollars ($)', 'woocommerce'),
+            'CZK' => __('CZK)', 'woocommerce')
           ),
           'description' => __('The currency you use for your products. The Price is automaticaly converted to BURST', 'woocomerce'),
           'default' => 'EUR',
