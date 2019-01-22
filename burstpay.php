@@ -3,8 +3,8 @@
 /*
 Plugin Name: WooCommerce Payment Gateway - BurstPay
 Description: Accept Burstcoin via BurstPay in your WooCommerce store
-Version: 1.0.0
-Author: BurstPay
+Version: 2.0.0
+Author: BurstPay(andylamgot)
 License: MIT License
 License URI: https://github.com/burstpay/woocommerce-plugin/blob/master/LICENSE
 Github Plugin URI: https://github.com/burstpay/woocommerce-plugin
@@ -12,7 +12,7 @@ Github Plugin URI: https://github.com/burstpay/woocommerce-plugin
 
 add_action('plugins_loaded', 'burstpay_init');
 
-define('BURSTPAY_WOOCOMMERCE_VERSION', '1.0.0');
+define('BURSTPAY_WOOCOMMERCE_VERSION', '2.0.0');
 
 function burstpay_init()
 {
