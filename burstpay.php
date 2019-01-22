@@ -2,7 +2,6 @@
 
 /*
 Plugin Name: WooCommerce Payment Gateway - BurstPay
-Plugin URI: https://www.burstpay.net
 Description: Accept Burstcoin via BurstPay in your WooCommerce store
 Version: 1.0.0
 Author: BurstPay
@@ -55,8 +54,8 @@ function burstpay_init()
     {
       ?>
       <h3><?php _e('BurstPay', 'woothemes'); ?></h3>
-      <p><?php _e('Accept BurstCoin through the burstpay.net and receive payments in euros and US dollars.<br>
-       Support &middot; <a href="mailto:support@burstpay.net">support@burstpay.net</a>', 'woothemes'); ?></p>
+      <p><?php _e('Accept BurstCoin through the burstpay and receive payments in HK dollars.<br>
+       Support &middot; <a href="mailto:support@burstpay.io">support@burstpay.io</a>', 'woothemes'); ?></p>
       <table class="form-table">
         <?php $this->generate_settings_html(); ?>
       </table>
@@ -87,7 +86,7 @@ function burstpay_init()
           'default' => __('Burstcoin', 'woocommerce'),
         ),
         'burstcoin_address' => array(
-          'title' => __('Burstcoin wallet ID, ex: BURST-ENPB-KM83-BZP7-7DM6Y', 'woocommerce'),
+          'title' => __('Burstcoin wallet ID, ex: BURST-EMPD-KN81-BZP7-7DM6Z', 'woocommerce'),
           'type' => 'text',
           'description' => __('BurstCoin Account', 'woocommerce'),
           'default' => '',
@@ -97,12 +96,11 @@ function burstpay_init()
           'type' => 'select',
           'options' => array(
             'BURST' => __('Burstcoin (฿)', 'woocommerce'),
-            'EUR' => __('Euros (€)', 'woocommerce'),
             'USD' => __('US Dollars ($)', 'woocommerce'),
-            'CZK' => __('CZK)', 'woocommerce')
+            'HKD' => __('HK Dollars ($)', 'woocommerce')
           ),
           'description' => __('The currency you use for your products. The Price is automaticaly converted to BURST', 'woocomerce'),
-          'default' => 'EUR',
+          'default' => 'HKD',
         ),
 
       );
@@ -154,7 +152,7 @@ function burstpay_init()
           'cookies' => array()
       );
       
-      $response = wp_remote_post( 'https://burstpay.net/?api=1', $args );
+      $response = wp_remote_post( 'https://burstpay.io/?api=1', $args );
       $result=json_decode($response['body'],true);
 
       if ($result['status']==1) {
