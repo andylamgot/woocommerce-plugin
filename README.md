@@ -8,7 +8,7 @@ Start accepting burstcoin now on your website!
 == Description ==
 
 Burstcoin is an innovative payment network and a new kind of money, a 2.0 cryptocurrency that is based on a new alghoritm called Proof Of Capacity.
-BurstPay is a burstcoin payment processor, which allows businesses to receive payments in euros and US dollars through the Burstpay payment network
+BurstPay is a burstcoin payment processor, which allows businesses to receive payments in HK dollars through the Burstpay payment network
 
 == Installation ==
 
