@@ -23,4 +23,3 @@ BurstPay is a burstcoin payment processor, which allows businesses to receive pa
 [Plugin not working? Most common plugin issues] support[at]burstpay[dot]net
 
 
-https://www.burstpay.net
